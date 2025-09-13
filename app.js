@@ -1,12 +1,11 @@
-/* 12)  Promptdan kiritilgan stringlar orasida "a" harfi necha marta ishtirok etganini aniqlovchi kod yozing!
+/* 13)  Berilgan: [21,1, 'Roziya', "array", ["I am array"], null, true, 214]
+    👆Tepadagi arrayni natijasini, 👇Pasdagi arrayni holiga keltiring))
+                            Yangi Array hosil qiling!
 */
-
-const word = prompt("istaganingizcha stringlar kiriting! Misol: ==>👇 ", "Assalomu Alaykum ! Qalaysiz Yaxshimisiz ? Yaxshimi ishlar ?")
-const result = word.split('')
-let counter = 0
-result.forEach((item) => {
-    if(item == "a" || item == 'A') {
-    counter++
-    }
+const myArray = [21.1, "Roziya", "array", ["I am array"], null, true, 214]
+let newArray = []
+myArray.forEach((item) => {
+    newArray.push(typeof item)
 })
-console.log(counter);
+
+console.log(newArray);
