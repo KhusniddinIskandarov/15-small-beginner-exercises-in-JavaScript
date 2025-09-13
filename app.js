@@ -1,24 +1,17 @@
-/* 19) funksiyaga berilgan raqamni 0 dan o'sha raqamlargacha bo'lgan sonlarini 3,5 va 15 ga bo'linish holatini tehshiring!
+/* 20) o'zingiz haqingizda object yarating va unga haqida methodini qo'shing. U menthoddan foydalanilsa, objectdagi malumotlardan foydalanib o'zingiz haqingizda gapirib bering. */
 
-Agar sonlar 3 ga bo'linsa - "fizz" 
-Agar sonlar 5 ga bo'linsa "buzz" 
-Agar sonlar 15 ga bo'linsa "fizzbuzz" deb nomlansin.
-*/
-const result = []
-
-const fizzBuzFunc = (number) =>  {
-    for (let i = 1; i <= number; i++) {
-        if(i % 3 == 0 && i % 5 == 0) {
-           result.push("FizzBuzz");
-        } else if(i % 5 == 0) {
-            result.push('Buzz')
-        } else if(i % 3 == 0 ) {
-            result.push('Fizz')
-        } else {
-            result.push(i)
-        }
-        
+const husniddinObj = {
+    name: 'Husniddin',
+    lastName: 'Iskandarov', 
+    age: 30,
+    region: 'Xorazm',
+    isMerried: false,
+    job: "Programmer",
+    haqida: function() {
+        return `
+        Assalomu Aleykum, Mening ismim ${this.name}, Familyam ${this.lastName}. Yoshim ${this.age}da. ${this.region}da yashayman. ${this.job} bo'lib faoliyat olib boraman. ${
+            this.isMerried? "Uylanganman" : "Hali uylanmaganman."
+        } `
     }
 }
-fizzBuzFunc(30)
-console.log(result);
+console.log(husniddinObj.haqida());
