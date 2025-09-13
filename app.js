@@ -1,16 +1,15 @@
-/* 8)  Array ichidagi faqat array elementlarini ajratib oling va yangi arrayga joylang 👇
-
-Kutilayotgan natija: [1, 2, 3, 4, 5, 6]
+/* 9)  Array ichidagi  [null, 0, "",  false, undefined, NaN] qiymatlarini ajratib oladiga kod yozing.
 */
+const checkData = [null,  'false', 0, 99, false, undefined,'', NaN,'0']
+let newCheckData = []
 
-const data = [[1, 2, 3], 'qizil', [4, 5, 6], true, false]
-
-const newData = data.map((item) => {
-    if(Array.isArray(item)) {
-        return item
+checkData.forEach((data)=> {
+    if(!data) {
+        newCheckData.push(data)
+        // console.log("Kutilgan Falsy qiymatlar:",data);
+    } else {
+        // console.log("Bular esa Truety qiymatlar:",data);
     }
 })
-.filter(Boolean)
-.flat()
 
-console.log(newData);
+console.log(newCheckData);
