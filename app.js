@@ -1,9 +1,20 @@
-/* 15) Arrayning berilgan: [1, 2, 3, 4, 5] shu elelmentlariga o'z index(position) raqamini qo'shib yangi array hosil qiling.
-Natija: [1, 3, 5, 7, 9] bo'lsin.
+/* 16) Berilgan sonning "tarkibidagi" sonlar yig'indisini toping.
+        Misol uchun:
+        1 + 2 + 3 = 6
+        1 + 2 + 3 + ... + 10 = 55
+        1 + 2 + 3 + ... 7 = 28
 */
 
-const myArray = [1, 2, 3, 4, 5]
-const newArray = myArray.map((item, i) => {
-    return item += i
-})
-console.log(newArray);
+let number = 0
+
+// 1-chi usul
+// for (let i = 1; i <= 10; i++) {
+//    console.log(number += i)
+// }
+
+// 2-chi usul
+for (let i = 1; i <= 7; i++) {
+    number += i
+}
+
+console.log(number);
