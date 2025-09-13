@@ -1,15 +1,24 @@
-/* 18) Funksiyaga array kiritsak, u array ichidagi raqamlarni teskari ishorasiga aylantirib bersin.
-// [1, 2, 3, 4, 5] => [-1, -2, -3, -4, -5] 
+/* 19) funksiyaga berilgan raqamni 0 dan o'sha raqamlargacha bo'lgan sonlarini 3,5 va 15 ga bo'linish holatini tehshiring!
+
+Agar sonlar 3 ga bo'linsa - "fizz" 
+Agar sonlar 5 ga bo'linsa "buzz" 
+Agar sonlar 15 ga bo'linsa "fizzbuzz" deb nomlansin.
 */
-const numbers = [1, 2, 3, 4, 5] 
-console.log(numbers);
+const result = []
 
-let newNambers = []
-
-const myFunc = (arr) => {
-    arr.forEach((number) => {
-       newNambers.push(number * -1);
-    })
+const fizzBuzFunc = (number) =>  {
+    for (let i = 1; i <= number; i++) {
+        if(i % 3 == 0 && i % 5 == 0) {
+           result.push("FizzBuzz");
+        } else if(i % 5 == 0) {
+            result.push('Buzz')
+        } else if(i % 3 == 0 ) {
+            result.push('Fizz')
+        } else {
+            result.push(i)
+        }
+        
+    }
 }
-myFunc(numbers)
-console.log(newNambers);
+fizzBuzFunc(30)
+console.log(result);
