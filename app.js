@@ -1,11 +1,5 @@
-/* 13)  Berilgan: [21,1, 'Roziya', "array", ["I am array"], null, true, 214]
-    👆Tepadagi arrayni natijasini, 👇Pasdagi arrayni holiga keltiring))
-                            Yangi Array hosil qiling!
+/* 14) Kiritilgan Textni nechta elementdan iboratligini aniqlovchi kod yozing. Lendth dan fodalanmang.  
 */
-const myArray = [21.1, "Roziya", "array", ["I am array"], null, true, 214]
-let newArray = []
-myArray.forEach((item) => {
-    newArray.push(typeof item)
-})
-
-console.log(newArray);
+const davlat = 'Uzbekistan'
+const result = davlat.lastIndexOf(davlat.slice(-1)) + 1 
+console.log(result);
