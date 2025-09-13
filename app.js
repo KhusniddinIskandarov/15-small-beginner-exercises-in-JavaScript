@@ -1,14 +1,16 @@
-/* 7) 👇 Ushbu arraydagi string index larini toping 👇
+/* 8)  Array ichidagi faqat array elementlarini ajratib oling va yangi arrayga joylang 👇
 
-const myArray = [[false, true], [1, 2], 99, 'yaxshi']
+Kutilayotgan natija: [1, 2, 3, 4, 5, 6]
 */
 
-const myArray = [[false, true], [1, 2], 99, 'yaxshi']
+const data = [[1, 2, 3], 'qizil', [4, 5, 6], true, false]
 
-myArray.forEach((item,i) => {
-    if(typeof item == 'string') {
-        console.log("Indexsi:", i);
-        console.log("Element:", item);
-        console.log(item, i);
+const newData = data.map((item) => {
+    if(Array.isArray(item)) {
+        return item
     }
 })
+.filter(Boolean)
+.flat()
+
+console.log(newData);
