@@ -1,10 +1,12 @@
-/* 3) ismlar array'i ichida, promptdan so'ralayotgan ism bo'lsa, ha bunday  ism bor, agar bo'lmasa, afsus bunday ism yo'q degan yozuv consolga chiqarilishi kerak. */
+/* 4) array ichidagi ismlarning ohiriga  bek qo'shimchasini qo'shing va yangi array hosil qiling. Natija: shu tarzda ko'rinsin👇
 
-const ismlar = ['Husniddin', "Ag'abek", 'Sardor', 'Jaloliddin', 'Siyaush'];
-const ism = prompt("Kim kerak: ?")
+const ismlar = ['Davronbek', "Mansurbek", 'Sardorbek', 'Furqatbek'];
+*/
 
-if(ismlar.includes(ism)) {
-    console.log("Ha bunday ism ro'yhatda bor!");
-} else {
-    console.log("Afsus, Bunday ism ro'yhatda yo'q.");
-}
+const ismlar = ['Davron', "Mansur", 'Sardor', 'Furqat'];
+// console.log(ismlar);
+
+const yangiIsmlar = ismlar.map((ism) => {
+    return ism.concat('bek')
+})
+console.log(yangiIsmlar);
