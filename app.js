@@ -1,10 +1,14 @@
-/* 6) promptdan belgilar kiritilsa, Avval meyyorda ko'rsatilgan qiymatni, kegin User ning kiritgan qiymati, agar U meyyordan oshsa, qancha oshganini, Agar meyyotdan kam bo'lsa qancha kamligi ko'rsatadigan kod yozing, Va consolga chiqaring */
+/* 7) 👇 Ushbu arraydagi string index larini toping 👇
 
-let meyyor = 20
-const belgilar = prompt('belgilar kiriting!')
+const myArray = [[false, true], [1, 2], 99, 'yaxshi']
+*/
 
-if(belgilar.length > meyyor) {
-    console.log(`Siz ${meyyor}ta belgi kiritishingiz mumkin, Va Siz ${belgilar.length }ta belgi kiritdingiz, Bu meyyordan ${belgilar.length - meyyor }ta ko'p `);
-} else {
-    console.log(`Siz ${meyyor}ta belgi kiritishingiz mumkin, Va Siz ${belgilar.length }ta belgi kiritdingiz, Bu meyyordan ${meyyor - belgilar.length }ta kam `);
-}
+const myArray = [[false, true], [1, 2], 99, 'yaxshi']
+
+myArray.forEach((item,i) => {
+    if(typeof item == 'string') {
+        console.log("Indexsi:", i);
+        console.log("Element:", item);
+        console.log(item, i);
+    }
+})
