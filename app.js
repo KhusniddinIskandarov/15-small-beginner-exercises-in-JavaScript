@@ -1,20 +1,14 @@
-/* 10)  Beringan qiymat: "Uzbekistan"
-        Kutilayotgan qiymat: "natsikebzU" 
-    Hullas berilgan qiymatni tesdkari qilib beradigan kod yozing😉.
+/* 11)  Promptdan kiritilgan istanlgan so'zlarni, misol uchun.
+Kiritiladi: "AssALOmu aLAYkum YaxsHIMisIz" 
+Natija bu shakilda bo'sin: "aSSALOMU aLAYKUM yAXSHIMISIZ" 
+Hohlasangiz birinchi bu shakilda qilib ko'ring! 👇
 */
 
-const mamlakat = "Uzbekistan"
-console.log(mamlakat);
+const salomlashish = prompt("Biron bir 3-ta so'zdan koproq nimadir yozing)) Misol shu kabi👇", "AssALOmu aLAYkum YaxsHIMisIz")
 
-// 1-chi usul
-const result = mamlakat.split('').reverse().join("")
-console.log("Birinchi usul:" ,result);
+const boshi = salomlashish.charAt().toLowerCase()
+const davomi = salomlashish.slice(1).toUpperCase()
+const result = " " + boshi.concat(davomi)
 
-// 2-chi usul
-let natija = ''
-let boshi = mamlakat.split('').reverse()
-boshi.forEach((item) => {
-    natija += item    
-})
-console.log("Ikkinchi usul:" ,natija);
+console.log(result);
 
