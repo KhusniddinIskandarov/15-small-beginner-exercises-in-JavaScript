@@ -1,14 +1,12 @@
-/* 11)  Promptdan kiritilgan istanlgan so'zlarni, misol uchun.
-Kiritiladi: "AssALOmu aLAYkum YaxsHIMisIz" 
-Natija bu shakilda bo'sin: "aSSALOMU aLAYKUM yAXSHIMISIZ" 
-Hohlasangiz birinchi bu shakilda qilib ko'ring! 👇
+/* 12)  Promptdan kiritilgan stringlar orasida "a" harfi necha marta ishtirok etganini aniqlovchi kod yozing!
 */
 
-const salomlashish = prompt("Biron bir 3-ta so'zdan koproq nimadir yozing)) Misol shu kabi👇", "AssALOmu aLAYkum YaxsHIMisIz")
-
-const boshi = salomlashish.charAt().toLowerCase()
-const davomi = salomlashish.slice(1).toUpperCase()
-const result = " " + boshi.concat(davomi)
-
-console.log(result);
-
+const word = prompt("istaganingizcha stringlar kiriting! Misol: ==>👇 ", "Assalomu Alaykum ! Qalaysiz Yaxshimisiz ? Yaxshimi ishlar ?")
+const result = word.split('')
+let counter = 0
+result.forEach((item) => {
+    if(item == "a" || item == 'A') {
+    counter++
+    }
+})
+console.log(counter);
